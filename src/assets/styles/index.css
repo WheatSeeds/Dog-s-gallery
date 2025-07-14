@@ -1,0 +1,48 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  --bg-color: #ebebeb;
+  --darker-bg-color: #9a9a9a;
+  --accent-color: #433281;
+  --white: #ebebeb;
+
+  --header-height: 4rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  height: 100svh;
+  overflow-x: hidden;
+}
+
+#root {
+  height: inherit;
+  min-height: inherit;
+}
+
+main {
+  padding: calc(var(--header-height) + 25px) 40px 25px 40px;
+  height: inherit;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  main {
+    padding: calc(var(--header-height) + 15px) 15px 15px 15px;
+  }
+}
